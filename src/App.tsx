@@ -2,7 +2,8 @@ import { globalStyle } from "./styles/GlobalStyle";
 import { Global } from "@emotion/react";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { SDSThemeProvider } from "@semicolondsm/react-emotion-theme";
-import MainPage from "./pages/main";
+import { BrowserRouter } from "react-router-dom";
+import MainRouter from "./router/MainRouter";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +21,9 @@ function App() {
     <SDSThemeProvider mode="light-only">
       <QueryClientProvider client={queryClient}>
         <Global styles={globalStyle} />
-        <MainPage />
+        <BrowserRouter>
+          <MainRouter />
+        </BrowserRouter>
       </QueryClientProvider>
     </SDSThemeProvider>
   );
