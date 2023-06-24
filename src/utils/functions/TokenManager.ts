@@ -1,5 +1,5 @@
-import axios from "axios";
 import cookies from "react-cookies";
+import instance from "../axios";
 
 export const setToken = (
   accessToken: string,
@@ -45,7 +45,7 @@ export const refreshToken = async () => {
   }
 
   try {
-    const response = await axios.put<RefreshToken>("/users/login", {
+    const response = await instance.put<RefreshToken>("/users/login", {
       refreshToken: refreshToken,
     });
 
