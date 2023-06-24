@@ -1,5 +1,5 @@
 const MainPage = () => {
-  return <>되나</>;
+  return <></>;
 };
 
 export default MainPage;
