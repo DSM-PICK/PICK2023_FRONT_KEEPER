@@ -7,12 +7,15 @@ import { Login } from "../../utils/apis/login";
 import cookies from "react-cookies";
 
 interface AuthType {
-  id: string;
+  account_id: string;
   password: string;
 }
 
 const LoginPage = () => {
-  const [inputs, setInputs] = useState<AuthType>({ id: "", password: "" });
+  const [inputs, setInputs] = useState<AuthType>({
+    account_id: "",
+    password: "",
+  });
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

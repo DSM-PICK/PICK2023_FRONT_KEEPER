@@ -4,7 +4,7 @@ import { setToken } from "../../functions/TokenManager";
 import { useNavigate } from "react-router-dom";
 
 interface UserLogin {
-  id: string;
+  account_id: string;
   password: string;
 }
 
